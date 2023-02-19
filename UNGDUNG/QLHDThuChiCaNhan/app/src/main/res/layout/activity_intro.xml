@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FED049"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.IntroActivity">
+
+    <ImageView
+        android:id="@+id/img_intro"
+        android:layout_width="282dp"
+        android:layout_height="234dp"
+        app:srcCompat="@drawable/shiba_logo_header" />
+
+    <TextView
+        android:id="@+id/txt_Tiltintro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/bungeeregular"
+        android:gravity="center"
+        android:text="MONEY NOTE WITH SHIBA"
+        android:textColor="#344D67"
+        android:textSize="28sp" />
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/AppBottomSheetDialogTheme"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:id="@+id/txtThemDanhMuc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/background_edittext"
+        android:fontFamily="@font/arimo"
+        android:gravity="center"
+        android:text="Thêm danh mục"
+        android:textColor="#3D5656"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtThemDanhMuc"
+        android:background="@drawable/background_edittext"
+        android:padding="15dp"
+        android:layout_margin="15dp">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/tgbLoaiDanhMuc"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDanhMucThu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#5DB075"
+                android:elevation="-15dp"
+                android:fontFamily="@font/arimo"
+                android:text="Thu"
+                android:textAllCaps="false"
+                android:textColor="#3D5656"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDanhMucChi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:elevation="10dp"
+                android:fontFamily="@font/arimo"
+                android:text="Chi"
+                android:textAllCaps="false"
+                android:textColor="#3D5656"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <ImageView
+            android:id="@+id/imgChonHinh"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/tgbLoaiDanhMuc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/cat_clipboard" />
+
+        <TextView
+            android:id="@+id/txtChonHinh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgChonHinh"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/arimo"
+            android:text="Chọn hình"
+            android:textColor="#3D5656"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expanHinhDanhMuc"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@id/txtChonHinh"
+            app:el_duration="100"
+            app:el_expanded="false">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHinhDanhMuc"
+                android:background="@drawable/background_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_gravity="center" />
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtTenViTien"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/expanHinhDanhMuc"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_edittext"
+            android:drawableStart="@drawable/writing"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/arimo"
+            android:hint="Tên danh mục"
+            android:paddingStart="15dp"
+            android:textColor="#3D5656"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTenViTien"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHuyBo"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/button_cancel"
+                android:fontFamily="@font/arimo"
+                android:text="Hủy bỏ"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHoanThanh"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/background_draw"
+                android:fontFamily="@font/arimo"
+                android:text="Hoàn thành"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
